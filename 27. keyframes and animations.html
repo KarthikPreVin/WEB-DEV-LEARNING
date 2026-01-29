@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animations</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+            zoom: 80%;
+        }
+        .container{
+            height: 807px;
+            width: 807px;
+            border: 4px solid lawngreen;
+            background-color: black;
+            display: inline-block;
+        }
+        .box{
+            padding: 0px;
+            margin:100px;
+            display: flex;
+            height: 200px;
+            width: 200px;
+            border: 2px solid lawngreen;
+            background-color: black;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+        }
+        h2{
+            font-size: 300%;
+            color: lawngreen;
+
+        }
+        #box1{
+            top: 4px;
+            left: 4px;
+            animation-name: box1;
+            animation-duration: 10s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-direction: normal;
+            /* animation-fill-mode:backwards; */
+        }
+        #box2{
+            top: 4px;
+            left: 408px;
+            animation-name: box2;
+            animation-duration: 10s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-direction: normal;
+            /* animation-fill-mode:backwards; */
+        }
+        #box3{
+            top: 408px;
+            left: 4px;
+            animation-name: box3;
+            animation-duration: 10s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-direction: normal;
+            /* animation-fill-mode:backwards; */
+        }
+        #box4{
+            top: 408px;
+            left: 408px;
+            animation-name: box4;
+            animation-duration: 10s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-direction: normal;
+            animation-fill-mode: backwards;
+            /* animation-fill-mode:backwards; */
+        }
+        @keyframes box1 {
+            0%{
+                top: 4px;
+                left: 4px;
+            }
+            25%{
+                top: 4px;
+                left: 408px;
+            }
+            50%{
+                top: 408px;
+                left: 408px;
+            }
+            75%{
+                top: 408px;
+                left: 4px;
+            }
+            100%{
+                top: 4px;
+                left: 4px;
+            }
+            
+        }
+        @keyframes box2 {
+            0%{
+                top: 4px;
+                left: 408px;
+            }
+            25%{
+                top: 408px;
+                left: 408px;
+            }
+            50%{
+                top: 408px;
+                left: 4px;
+            }
+            75%{
+                top: 4px;
+                left: 4px;
+            }
+            100%{
+                top: 4px;
+                left: 408px;
+            }
+            
+        }
+        @keyframes box3 {
+            50%{
+                top: 4px;
+                left: 408px;
+            }
+            75%{
+                top: 408px;
+                left: 408px;
+            }
+            100%{
+                top: 408px;
+                left: 4px;
+            }
+            0%{
+                top: 408px;
+                left: 4px;
+            }
+            25%{
+                top: 4px;
+                left: 4px;
+            }
+            
+        }
+        @keyframes box4 {
+            100%{
+                top: 408px;
+                left: 408px;
+            }
+            75%{
+                top: 4px;
+                left: 408px;
+            }
+            0%{
+                top: 408px;
+                left: 408px;
+            }
+            25%{
+                top: 408px;
+                left: 4px;
+            }
+            50%{
+                top: 4px;
+                left: 4px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">
+            <h2>1</h2>
+        </div>
+        <div class="box" id="box2">
+            <h2>2</h2>
+        </div>
+        <div class="box" id="box3">
+            <h2>3</h2>
+        </div>
+        <div class="box" id="box4">
+            <h2>4</h2>
+        </div>
+    </div>
+</body>
+</html>

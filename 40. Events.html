@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS EVENTS</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-size: 120%;
+        }
+        :root{
+            --primary: black;
+            --secondary-r: 255;
+            --secondary-g: 255;
+            --secondary-b: 255;
+
+        }
+        body{
+            padding-top: 20px ;
+            padding-left: 20px;
+            background-color: var(--primary);
+        }
+        .heading{
+            display: inline;
+            color: rgba(var(--secondary-r), var(--secondary-g), var(--secondary-b),1);
+            border: 2px solid var(--secondary);
+            padding: 5px 15px;
+            margin: 0px 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 5px rgba(var(--secondary-r),var(--secondary-g),var(--secondary-b),0.333),
+            
+        }
+        .container{
+            border: 2px solid rgba(var(--secondary-r), var(--secondary-g), var(--secondary-b),1);
+            border-radius: 10px;
+            padding: 10px;
+            width: 1000px;
+            background-color: var(--primary);
+            color: rgba(var(--secondary-r), var(--secondary-g), var(--secondary-b),1);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 50px 40px;
+            font-weight: bold;  
+            text-shadow: 0px 0px 10px rgba(var(--secondary-r), var(--secondary-g), var(--secondary-b), 0.496);
+            box-shadow: 0px 0px 30px 5px rgba(var(--secondary-r),var(--secondary-g),var(--secondary-b),0.333);
+        }
+        .btn{
+            padding: 5px 15px;
+            margin: 10px 30px;
+            background-color: var(--primary);
+            border: 2px solid rgba(var(--secondary-r), var(--secondary-g), var(--secondary-b),1);
+            color: rgba(var(--secondary-r), var(--secondary-g), var(--secondary-b),1);
+            border-radius: 10px;
+            box-shadow: 0px 0px 30px 2px rgba(var(--secondary-r), var(--secondary-g), var(--secondary-b), 0.675),
+                        0px 0px 60px 5px rgba(var(--secondary-r),var(--secondary-g),var(--secondary-b),0.333);
+            transition: all 0.1s linear;
+
+        }
+        .btn:hover{
+            background-color: rgba(var(--secondary-r), var(--secondary-g), var(--secondary-b),1);
+            color: var(--primary);
+            box-shadow: 0px 0px 30px 2px rgba(var(--secondary-r), var(--secondary-g), var(--secondary-b), 0.875),
+                        0px 0px 60px 5px rgba(var(--secondary-r),var(--secondary-g),var(--secondary-b),0.533),
+                        0px 0px 90px 10px rgba(var(--secondary-r), var(--secondary-g),var(--secondary-b),0.333);
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Browser Events:</h1>
+    <button class="btn" id="btn1" onclick="func1()">SHOW</button>
+    <div class="container" id="container1">...</div>
+    <h1 class="heading">Form Events:</h1>
+    <button class="btn" id="btn2" onclick="func2()">SHOW</button>
+    <div class="container" id="container2">...</div>
+    <h1 class="heading">Other Events:</h1>
+    <button class="btn" id="btn3" onclick="func3()">SHOW</button>
+    <div class="container" id="container3">...</div>
+
+    <div class="container" id="container4">using event listeners</div>
+
+    <script>
+        // using eventlisteners
+        let target=document.getElementById('container4');
+        target.addEventListener('mouseover',function (){
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            target.innerHTML='mouse over the container';
+        })
+        
+        target.addEventListener('mouseout',function (){
+            target.style.backgroundColor='yellow';
+            target.style.color='black';
+            target.innerHTML='mouse exit the container';
+        })
+        
+        target.addEventListener('mousedown',function (){
+            target.style.backgroundColor='pink';
+            target.style.color='black';
+            target.innerHTML='mouse pressed in the container';
+        })
+        
+        target.addEventListener('mouseup',function (){
+            target.style.backgroundColor='blue';
+            target.style.color='black';
+            target.innerHTML='mouse released in the container';
+        })
+        
+        target.addEventListener('mousemove',function (){
+            target.style.backgroundColor='crimson';
+            target.style.color='black';
+            target.innerHTML='mouse move in the container';
+        })
+        
+        target.addEventListener('click',function (){
+            target.style.backgroundColor='orange';
+            target.style.color='black';
+            target.innerHTML='left click the container';
+        })
+        target.addEventListener('contextmenu',function (){
+            target.style.backgroundColor='red';
+            target.style.color='black';
+            target.innerHTML='right click the container';
+        })
+        
+        
+        let state1 = false;
+        let state2 = false;
+        let state3 = false;
+        let text1 = `click -> left click<br>
+        contextmenu -> right click<br>
+        mouseover -> mouse enter element<br>
+        mouseout -> mouse exit element<br>
+        mousedown -> mouse button press(both right and left click)<br>
+        mouseup -> mouse button release(both right and left click)<br>
+        mousemove -> mouse move into element<br>`;
+
+        let text2 = `submit -> submit the form<br>
+        focus -> focus on an element<br>`;
+
+        let text3 = `DOMContentLoaded -> when the content of dom are loaded<br>
+        transitionend -> fired at the end of a transition<br>`;
+
+
+        function func1(){
+            let target=document.getElementById('container1');
+            let btn = document.getElementById('btn1');
+            if (state1==true){
+                state1=false;
+                btn.innerText= "SHOW";
+                target.innerHTML= "...";
+            }
+            else{
+                state1=true;
+                btn.innerText= "HIDE";
+                target.innerHTML = text1
+            }
+        }
+        function func2(){
+            let target=document.getElementById('container2');
+            let btn = document.getElementById('btn2');
+            if (state2==true){
+                state2=false;
+                btn.innerText= "SHOW";
+                target.innerHTML= "...";
+            }
+            else{
+                state2=true;
+                btn.innerText= "HIDE";
+                target.innerHTML = text2;
+            }
+        }
+        function func3(){
+            let target=document.getElementById('container3');
+            let btn = document.getElementById('btn3');
+            if (state3==true){
+                state3=false;
+                btn.innerText= "SHOW";
+                target.innerHTML= "...";
+            }
+            else{
+                state3=true;
+                btn.innerText= "HIDE";
+                target.innerHTML = text3;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

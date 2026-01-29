@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set time out and set interval</title>
+    <style>
+        button{
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            margin: 200px;
+
+        }
+        #btn{
+            transition: transform 50ms linear ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="clicked()">Stop the alert</button>
+
+        <button id="btn" onclick="onclickrotater()">click to stop</button>
+
+        <script>
+            // let tid = setTimeout(alert, 5000, "you didnt press the button")
+            // function clicked(){
+            //     clearTimeout(tid)
+            // }
+            let angle = 0
+            function rotatebtn(){
+                let btn=document.getElementById('btn')
+                btn.style.transform = `rotate(${angle}deg)`
+                angle+=1
+            }
+            let interID = setInterval(rotatebtn,10)
+            flag=true
+            function onclickrotater(){
+                if (flag){
+                    clearInterval(interID)
+                }
+                else{
+                    interID = setInterval(rotatebtn,10)
+                }
+                flag = !flag
+            }
+
+        </script>
+    </div>
+</body>
+</html>

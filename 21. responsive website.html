@@ -1,0 +1,101 @@
+<!-- a responsive website is one which adjusts to height and width resolution by itself -->
+<!DOCTYPE html>
+
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive website</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .container{
+            font-size: 15px;
+            border: 2px solid red;
+            height: 50vh;
+            width: 60vw;
+            margin: 0rem;
+            box-sizing: border-box;
+            
+        }
+        .heading{
+            border: 1px solid black;
+        }
+        #heading0{
+            float: right;
+        }
+
+        #heading1{
+            font-size: 2em;
+            clear: both;
+        }
+        #heading2{
+            font-size: 2rem;
+            
+        }
+
+        #container2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .box{
+            display: none;
+            border:2px solid black;
+            
+        }
+        @media only screen and (max-width:300px) {
+            #box1{
+                display: block;
+                flex-basis: 200px;
+            } 
+        }
+        @media only screen and (min-width:301px) and (max-width:500px) {
+            #box2{
+                display: block;
+                flex-basis: 400px;
+            } 
+        }
+        @media only screen and (min-width:501px) and (max-width:800px) {
+            #box3{
+                display: block;
+                flex-basis: 700px;
+            } 
+        }
+        @media only screen and (min-width:801px){
+            #box4{
+                display: block;
+                flex-basis: 900px;
+            } 
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container" id="container12" style="display:none;">
+        <h3 style="float: left;">FONTS</h3>
+        <h3 class="heading" id="heading0">this is normal font-size of parent which is 15px</h3>
+        <h3 class="heading" id="heading1">This is 2em font i.e 2 times parent font size which is 2*15=30px</h3>
+        <h3 class="heading" id="heading2">This is 2rem font i.e 2 times html font size which is 2*20=40px</h3>
+        <p id="para1">
+            &nbsp;&nbsp;&nbsp;vh represents viewport height, 100vh is same as 100% viewport height, same for vw whih is viewport width
+        </p>
+    </div>
+    <div class="container" id="container2">
+        <h3>MEDIA QUERIES!</h3>
+        <div class="box" id="box1">Phone</div>
+        <div class="box" id="box2">Tablet</div>
+        <div class="box" id="box3">Desktop</div>
+        <div class="box" id="box4">Wide Screen</div>
+
+    </div>
+</body>
+</html>

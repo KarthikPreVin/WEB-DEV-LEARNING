@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+        p{
+            font-size: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+        div > p{
+            /* targets all para just inside the div */
+            background-color: black;
+            color: white;
+        }
+        div + p{
+            /* target para that are after a div */
+            background-color: blue;
+            color: red;
+        }
+    
+    </style>
+</head>
+<body>
+    <p>this para comes before the external div</p>
+    <div>
+
+        <div>
+            <p>this para is inside a div</p>
+            <ul>
+                <li><p>This para inside ul inside div inside div</p></li>
+                <li>this is inside li inside ul inside div inside div</li>
+            </ul>
+        </div>
+        <p>This para comes after the div inside div</p>
+    </div>
+    <p>thid psra comes after the external div</p>
+</body>
+</html>

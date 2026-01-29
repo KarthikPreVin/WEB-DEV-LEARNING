@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin & boxes</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            
+        }
+        #heading{
+            color: burlywood;
+            background-color: black;
+        }
+        .Paragraphs{
+            color: blueviolet;
+            background-color: rgb(202, 183, 183);
+            height: 10em;
+            width: 30em;
+            font-family: cursive;
+            font-size: 150%;
+        }
+        .borderstyle{
+            border-width: 5px;
+            border-color: lime;
+            border-style: solid;/*border style is mandatory*/
+            border-radius: 10px;
+            /* border: 4px solid green */
+        }
+        .onesideborder{
+            border-top: 4px solid navy;
+            border-right: 4px solid navy;
+            border-bottom: 4px solid red;
+            border-left: 4px solid red;
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        .bgimage{
+            background-image: url("https://via.placeholder.com/300x300");
+            border: 10px solid green;
+            color:blue;
+            background-color: bisque;
+            height: 500px;
+            width: 900px;
+            font-family: cursive;
+            font-size: 250%;
+            background-repeat:no-repeat;
+            background-position: center bottom;
+
+        }
+
+        .maincontainer{
+            background-color: rgb(0, 29, 57);   
+            padding: 5px;
+        }
+
+        .container{
+            background-color: rgb(172, 198, 220);
+            border: 3px red solid;
+            padding: 9px;
+            height: 200px;
+            width: 500px;
+            margin: 10px;
+        }
+        .newpara{
+            background-color: rgb(158, 155, 155);
+            color: rgb(47, 18, 18);
+
+        }
+        .newhead{
+            font-family: cursive;
+            font-size: 110%;
+            font-weight:bold;
+            border :4px double black;
+            width: 13em;
+            padding-left: 2em;
+            margin-left: 6em;   
+            margin-bottom: 3 em;
+        }
+        
+        .newpadd 
+        {
+            background-color: rgb(158, 155, 155);
+            color: rgb(47, 18, 18);
+            border: 5px solid rgb(255, 255, 255); 
+            /* padding: 10px 20px 30px 40px; */
+            margin: 1px 10px 0px 10px;
+            padding: 24px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="heading">borders</h2>
+    <p class="Paragraphs borderstyle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus ex quisquam tempora reprehenderit nam ullam quos eos dicta sunt a molestiae eius, ad consequuntur praesentium veniam rerum illum quas sed adipisci, facilis aut. Recusandae facilis iste blanditiis perferendis accusantium repellendus quia animi neque facere? Consequuntur pariatur tempora, ipsam sint corporis dolorum quae atque, eveniet ad dolore fugit ea dicta! Dicta?</p>
+    <p class="Paragraphs onesideborder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quia cum voluptatem aut explicabo necessitatibus, incidunt est dignissimos atque adipisci assumenda vero esse delectus voluptas, doloremque maxime natus labore consectetur.</p>
+    <p class="bgimage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quod, quo sint ea veniam quasi neque reprehenderit nisi eos mollitia quos, voluptate animi, laboriosam soluta nulla numquam. Vel, iure ea!</p>
+    
+    <div class="maincontainer">
+        <h2 id="heading">boxes in HTML</h2>
+        <img style="border: 5px solid black" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDtGvds27_Gu9veJGofbUNMM6quVWJO--28okv0b2rFlsqH-aX07-Tx893dbIYj3IJeak&usqp=CAU" alt="image missing">
+        <div class="container">
+            <h3 class="newhead">This is a New Heading</h3>
+            <p class="newpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptas veniam, hic iusto deserunt quidem maiores aliquid nesciunt sed, totam qui id deleniti molestias obcaecati ipsam consequatur. Molestias, harum pariatur?</p>
+        </div>
+        <div class="container">
+            <h3 class="newhead">This is a New Heading</h3>
+            <p class="newpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptas veniam, hic iusto deserunt quidem maiores aliquid nesciunt sed, totam qui id deleniti molestias obcaecati ipsam consequatur. Molestias, harum pariatur?</p>
+        </div>
+        <div class="container">
+            <h3 class="newhead">This is a New Heading</h3>
+            <p class="newpadd">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptas veniam, hic iusto deserunt quidem maiores aliquid nesciunt sed, totam qui id deleniti molestias obcaecati ipsam consequatur. Molestias, harum pariatur?</p>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading{
+            text-decoration-line: underline;
+            text-transform: capitalize;
+            text-shadow: 0px 0px 3px rgba(255, 0, 0, 0.496);
+            text-align: center;
+        }
+        #console{
+            overflow-y: scroll;
+            border: 2px solid red;
+            padding: 5px;
+            height: 70vh;
+            margin: 10px 50px
+        }
+    </style>
+
+</head>
+<body>
+    <div id="console">
+        <h2 class="heading">CONSOLE</h2>
+    </div>
+    <script>
+        let count=1;
+        function print(text){
+            document.getElementById("console").innerHTML+=`<p>${count}.&nbsp;&nbsp;&nbsp;${text}</p>`;count++
+        }
+        //for loop
+        arr=["hello","Welcome","to","java","Script"]
+        for (let i=1;i<5;i++){
+            print(i);
+        }
+        //traditional for loop to traverse an array
+        for (let i=0;i<arr.length;i++){print(arr[i])}
+        //foreach traversing an array
+        arr.forEach(function(element){
+            print(element+',')
+        });
+        //for of traversing array
+        for (element of arr){print(element)};
+        obj={
+            name : "Karthik",
+            age : 18,
+            school : "DAV",
+        }
+        for (key in obj){
+            print(key+ " = "+obj[key])
+        }
+        //while loops
+        {let j=1;
+        while(j<10){
+            print(j)
+            j+=2
+
+        }}
+        print()
+        {let j=1;
+        do{
+            print(j)
+            j++;j++
+        }while (j<10)}
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Area</title>
+    <style>
+        
+        .grid{
+            display: grid;
+            
+        }
+        .navigation{
+            grid-area: nav;
+        }
+        #section1{
+            grid-area: section1;
+        }
+        #section2{
+            grid-area: section2;
+            /* display: none; */
+        }
+        .aside{
+            grid-area: aside;
+        }
+        .footer{
+            grid-area: footer;
+        }
+
+        body{
+            background-color: black;
+        }
+
+        .item{
+            background-color: black;
+            color: cyan;
+            padding: 10px;
+            border: 2px solid cyan;
+            margin: 4px;
+            border-radius: 10px;
+        }
+
+        .navigation ul{
+            display: flex;
+            list-style: none;
+        }
+        .navigation ul li{
+            padding: 10px;
+            background-color: black;
+            color: cyan;
+            margin: 0px 10px;
+            border-radius: 10px;
+            border: 2px solid cyan;
+        }
+        .navitem:hover{
+            background: cyan;
+            color: black;
+            box-shadow: 0px 0px 20px cyan, 0px 0px 45px rgba(0, 255, 255, 0.5);
+        }
+        .navitem:active{
+            background: cyan;
+            color: black;
+            /* transition: transform 0.1s linear; */
+            transform: scale(1.05);
+            box-shadow: 0px 0px 40px cyan, 0px 0px 75px rgba(0, 255, 255, 0.5);
+        }
+        @media only screen and (max-width:500px) {
+            .grid{
+                grid-template-areas: 
+                "nav"
+                "section1"
+                "section2"
+                "footer";
+            }      
+            .navigation ul{
+                display: grid;
+                grid-template-columns: repeat(2,auto);
+                margin: 0px;
+                padding: 0px;
+            }      
+            
+            .aside{
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width:501px) and (max-width:900px) {
+            .grid{
+                grid-template-areas: 
+                "nav"
+                "section1"
+                "section2"
+                "aside"
+                "footer";
+            }            
+        }
+        
+        @media only screen and (min-width:901px) {
+            .grid{
+                grid-template-areas: 
+            "nav nav nav nav"
+            "aside section1 section1 section1"
+            "aside section2 section2 section2"
+            "footer footer footer footer";
+            }            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+
+        <nav class="navigation item">
+            <ul>
+                <li class="navitem">Home</li>
+                <li class="navitem">About Us</li>
+                <li class="navitem">Services</li>
+                <li class="navitem">Contact Us</li>
+            </ul>
+        </nav>
+        <section class="section item" id="section1">
+            <h2 class="heading">Section</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in facere tempora inventore provident
+            reprehenderit aliquid corporis commodi voluptates sed, eos eligendi temporibus aliquam expedita obcaecati
+            dolorem modi veniam? Provident ea labore nihil. Voluptate pariatur nostrum dolorum impedit minima ratione,
+            ipsum porro natus similique? Dignissimos, tempora itaque. Eveniet unde accusamus, sapiente, neque porro,
+            dolore qui nobis hic modi quis harum alias aliquam voluptatum? Repellat quasi beatae voluptate rerum dolorum
+            minus deserunt eveniet consequatur amet. Velit ipsum, accusantium enim, corporis quod labore ab pariatur
+            dicta, perferendis sequi eum iusto ea rerum saepe rem ullam officiis veritatis sapiente fugiat magnam
+            consequatur! Ea illum quos temporibus amet laborum eligendi, eos aperiam impedit, molestias perspiciatis
+            numquam explicabo fuga eaque facere assumenda. Dicta ad laboriosam doloremque voluptatem, alias accusantium.
+            Accusamus iusto dolor molestiae sed praesentium eligendi quis earum nihil laudantium esse amet voluptas
+            dolorum placeat sit neque doloremque officia, voluptatum porro veritatis possimus, reiciendis numquam
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga cum amet, accusantium officia consectetur aperiam repellat ipsa impedit nesciunt ipsum aut vel necessitatibus veritatis eum laudantium porro commodi. Quam quisquam ut quaerat culpa excepturi!
+            
+
+        </section>
+        <section class="section item" id="section2">
+            <h2 class="heading">Section</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in facere tempora inventore provident
+            reprehenderit aliquid corporis commodi voluptates sed, eos eligendi temporibus aliquam expedita obcaecati
+            dolorem modi veniam? Provident ea labore nihil. Voluptate pariatur nostrum dolorum impedit minima ratione,
+            ipsum porro natus similique? Dignissimos, tempora itaque. Eveniet unde accusamus, sapiente, neque porro,
+            dolore qui nobis hic modi quis harum alias aliquam voluptatum? Repellat quasi beatae voluptate rerum dolorum
+            minus deserunt eveniet consequatur amet. Velit ipsum, accusantium enim, corporis quod labore ab pariatur
+            dicta, perferendis sequi eum iusto ea rerum saepe rem ullam officiis veritatis sapiente fugiat magnam
+            consequatur! Ea illum quos temporibus amet laborum eligendi, eos aperiam impedit, molestias perspiciatis
+            numquam explicabo fuga eaque facere assumenda. Dicta ad laboriosam doloremque voluptatem, alias accusantium.
+            Accusamus iusto dolor molestiae sed praesentium eligendi quis earum nihil laudantium esse amet voluptas
+            dolorum placeat sit neque doloremque officia, voluptatum porro veritatis possimus, reiciendis numquam
+
+        </section>
+        <aside class="aside item">
+            <h2 class="heading">Aside</h2>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptatibus assumenda ratione quidem
+            tempora cumque et veritatis, consequuntur laboriosam, nihil sed consequatur dolorum corporis sint non
+            impedit dolor aperiam ea architecto facere molestiae modi deserunt illum! Esse dolore nam veritatis pariatur
+            amet ea, suscipit cum ducimus, ipsa error eveniet recusandae, possimus id explicabo. Quae, cumque? Veniam,
+            laboriosam voluptates optio minus mollitia reprehenderit, deleniti molestias ut, nulla sit non ratione! Ut
+            voluptates ipsum ipsam, enim repudiandae excepturi quia temporibus ea ullam dignissimos dolorum fuga
+            pariatur, possimus in deleniti alias sint hic facere quis similique, numquam dolores rerum sapiente minus.
+            Voluptatibus, accusantium.
+
+        </aside>
+        <footer class="footer item">
+            This is Footer: memememememe@hotmail.com | +91 98765 43210
+        </footer>
+    </div>
+</body>
+
+</html>

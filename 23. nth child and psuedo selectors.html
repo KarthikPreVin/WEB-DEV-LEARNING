@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth child and psuedo Selectors</title>
+    <style>
+        a{
+            border: 2px solid black;
+            border-radius: 50px;
+            display:block;
+            width: 10em;
+            margin: 10px;
+        }
+        input{
+            font-size: 25px;
+            border-radius: 50px;
+            display: block;
+            margin: 10px auto;
+        }
+        form{
+            display: block;
+            margin: auto;
+            height: 30vh;
+        }
+
+        /* psuedo selectors */
+        /* select all a tags with target set */
+        a[target]{
+            background-color: black;
+            color: white;
+        }
+        /* select all a tag with target=_blank */
+        a[target="_blank"]{
+            background-color: grey;
+            color: cyan;
+            
+        }
+
+        input[type=text]{
+            background-color: black;
+            color: white;
+        }
+        input[type="text"]::placeholder{
+            color: white;
+        }
+
+        /* nth child variant */
+
+        /* even */
+        li:nth-child(even){
+            background-color: cyan;
+            color: red;
+        }
+        /* odd */
+        li:nth-child(odd){
+            background-color: red;
+            color: cyan;
+        }
+        li:nth-child(3){
+            background-color: black;
+            color: white;
+        }
+        li:nth-child(6n){
+            background-color: indigo;
+            color: red;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <a href="https://www.google.com" >Go to Google</a>
+    <a href="https://www.google.com" target="">Go to Google</a>
+    <a href="https://www.google.com" target="_blank">Go to google</a>   
+    <a href="https://www.google.com" target="_self">Go to google</a> 
+    <div class="container">
+    <form action="">
+        <input type="text" name="Name" placeholder="Enter Your Name">
+        <input type="email" name="Email" placeholder="Enter Email">
+        <input type="submit" value="Submit Now!!!!">
+    </form>  
+        <ul>
+            <li class="item" id="item1">item - 1</li>
+            <li class="item" id="item2">item - 2</li>
+            <li class="item" id="item3">item - 3</li>
+            <li class="item" id="item4">item - 4</li>
+            <li class="item" id="item5">item - 5</li>
+            <li class="item" id="item6">item - 6</li>
+            <li class="item">item - 7</li>
+            <li class="item">item - 8</li>
+            <li class="item">item - 9</li>
+            <li class="item">item - 10</li>
+            <li class="item">item - 11</li>
+            <li class="item">item - 12</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        #headingmain{
+            display: inline-block;
+            border: 3px solid black;
+        }
+        .container{
+            border: 10px solid red;
+            border-radius: 10px;
+            height: 600px;
+            /* width: 500px;   */
+            padding: 5px;
+            /* initialise the container as a flex box */
+            display: flex;
+        
+            /* Flex properties */
+            /* flex-direction: row, column, row-reverse, column-reverse */
+            flex-direction: row;
+
+            /* flex-wrap: wrap, wrap-reverse */
+            flex-wrap: wrap;
+            
+            /* flex-flow: combination of flex-wrap and flex-direction */
+            flex-flow: wrap row-reverse;
+            flex-flow: row wrap;
+
+            /* justify-content:  */
+            justify-content: flex-end;
+            justify-content: flex-start;
+
+            justify-content: center;
+            justify-content:left;
+            justify-content: right;
+            
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly;
+
+            /* align-items : center , flex-end , flex-start*/
+            align-items: center;
+            align-items: stretch;
+
+        }
+        .container{
+            flex-wrap: nowrap !important;
+            flex-direction: row !important;
+        }
+        .item{
+            border: 2px solid lawngreen;
+            color: cyan;
+            background-color: black;
+            font-size: 200%;
+            width: 112px;
+            height: 100px;
+            margin: 5px;
+
+
+            order: 1 !important;
+            flex : 1 1 200px !important;
+            
+        }
+        #item-1{
+            order: 4;
+            flex-grow: 3;
+            flex-shrink: 2;
+            flex-basis: 300px;
+            align-self: center;
+        }
+        #item-2{
+            order: 2;
+            flex-grow: 2;
+            flex-shrink: 3;
+            align-self: flex-end;
+        }
+        #item-3{
+            order: 5;
+            flex-grow: 1;
+            flex-shrink: 1;
+            align-self: flex-start;
+        }
+        #item-4{
+            order: 1;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        #item-5{
+            order: -1;
+            flex-grow: 2;
+            flex-shrink: 3;
+        }
+        #item-6{
+            order: -2;
+            flex-grow: 3;
+            flex-shrink: 2;
+        }
+        #item-7{
+            order: -3;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        #item-8{
+            flex-grow: 1;
+            flex-shrink: 1;
+
+        }
+    </style>
+</head>
+<body>
+    <h3 id="headingmain">Flex Boxes</h3>
+    <div class="container">
+        <div class="item" id="item-1">1st Box</div>
+        <div class="item" id="item-2">2nd Box</div>
+        <div class="item" id="item-3">3rd Box</div>
+        <!-- <div class="item" id="item-4">4th Box</div>
+        <div class="item" id="item-5">5th Box</div>
+        <div class="item" id="item-6">6th Box</div>
+        <div class="item" id="item-7">7th Box</div>
+        <div class="item" id="item-8">8th Box</div> -->
+    </div>
+</body>
+</html>

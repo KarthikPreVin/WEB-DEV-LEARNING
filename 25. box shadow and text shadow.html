@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box and text shadow</title>
+    <style>
+        .container{
+            display: flex;  
+            margin: 1vh 20vw;
+            border: 3px solid black;
+            width: 100vw;
+            flex-wrap: wrap;
+        }
+/*         
+        .container::before{
+            content: "";
+            background: url(https://marketplace.canva.com/EAFekpb5NK0/1/0/1600w/canva-dark-modern-photo-mountain-and-sky-desktop-wallpaper-5ixgVU5XGxc.jpg) no-repeat center center/cover;
+            position: absolute;
+            z-index: -1;
+            opacity: 0.3;
+            width: 58.5vw;
+            height: 67.5vh;
+        } */
+
+        .card{
+            background-color: rgb(168, 229, 218);
+            margin: 40px;
+            padding: 10px;
+            width: 40vw;
+
+            /* syntax for box-shadow -> x-offset, y-offset, blur-radius,spread-radius, colour */
+            box-shadow: 10px 20px 10px 10px blue;
+        }
+        #card1{
+            box-shadow: 10px 10px 10px blue;
+        }
+        #card2{
+            box-shadow: 0px 0px 20px 5px blue;
+        }
+        #card3{
+            box-shadow: -10px -10px 10px blue;
+        }
+        #card4{
+            box-shadow: inset 10px 10px 10px blue;
+        }
+        #card5{
+            box-shadow: inset -10px -10px 10px blue;
+        }
+        #card6{
+            box-shadow: 0px 0px 20px 5px red, 0px 0px 20px 10px blue;
+        }
+        #card7{
+            box-shadow: 0px 0px 10px 3px greenyellow;
+        }
+        #card7 h2{
+            text-shadow: 2px 2px 2px red;
+        }
+        #card7 p{
+            text-shadow: 1px 1px 1px red;
+        }
+        #card8{
+            background-color: black;
+            box-shadow: 0px 0px 10px 3px greenyellow;
+        }
+        #card8 h2{
+            text-shadow: 0px 0px 4px white;
+            text-decoration-line: underline;
+        }
+        #card8 p{
+            text-shadow: 0px 0px 20px white;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>positive offset box shadow</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente amet numquam assumenda, dolore vero atque maiores eos placeat saepe in iste nesciunt dolorum! Natus dignissimos ipsa temporibus ducimus sequi iste.</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>center box shadow</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente amet numquam assumenda, dolore vero atque maiores eos placeat saepe in iste nesciunt dolorum! Natus dignissimos ipsa temporibus ducimus sequi iste.</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>negative offset box shadow</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente amet numquam assumenda, dolore vero atque maiores eos placeat saepe in iste nesciunt dolorum! Natus dignissimos ipsa temporibus ducimus sequi iste.</p>
+        </div>
+        <div class="card" id="card4">
+            <h2>positve inset box shadow</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente amet numquam assumenda, dolore vero atque maiores eos placeat saepe in iste nesciunt dolorum! Natus dignissimos ipsa temporibus ducimus sequi iste.</p>
+        </div>
+        <div class="card" id="card5">
+            <h2>negative inset box shadow</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente amet numquam assumenda, dolore vero atque maiores eos placeat saepe in iste nesciunt dolorum! Natus dignissimos ipsa temporibus ducimus sequi iste.</p>
+        </div>
+        <div class="card" id="card6">
+            <h2>multiple box shadow</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente amet numquam assumenda, dolore vero atque maiores eos placeat saepe in iste nesciunt dolorum! Natus dignissimos ipsa temporibus ducimus sequi iste.</p>
+        </div>
+        <div class="card" id="card7">
+            <h2>text shadow intro</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente amet numquam assumenda, dolore vero atque maiores eos placeat saepe in iste nesciunt dolorum! Natus dignissimos ipsa temporibus ducimus sequi iste.</p>
+        </div>
+        <div class="card" id="card8">
+            <h2>text shadow use case</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente amet numquam assumenda, dolore vero atque maiores eos placeat saepe in iste nesciunt dolorum! Natus dignissimos ipsa temporibus ducimus sequi iste.</p>
+        </div>
+    </div>    
+</body>
+</html>

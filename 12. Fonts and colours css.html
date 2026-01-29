@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts and colours in CSS</title>
+    <style>
+        .MainPara{
+            color: blueviolet;
+            font-size: 40px;
+            /* font-size: 150%; */
+            font-family:'Courier New', Courier, monospace;
+            /* priority list if courier new is present font= courier new elif courier is present font= courier else monospace */
+            line-height: 2em;/* amount of lines after previous font... "em" represents the parent font size*/
+            
+
+        }
+        span{
+            font-weight: bold;
+            font-style: italic;
+        }
+        .color1{
+            color: brown;
+        }
+        .color2{
+            color: rgb(0, 0, 0)
+        }
+        
+        .color3{
+            color: #b00b69
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h2 style = "color: purple;">fonts in css</h2>
+    <p class="MainPara">Testing <span>fonts</span>  qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890</p>
+
+    <h2>colours</h2>
+    <h3 class="color1">color1</h3>
+    <h3 class="color2">color2</h3>
+    <h3 class="color3">color3</h3>
+    <h3 class="color4">color4</h3>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-areas: "nav nav"
+                                "sec1 sec2";
+            grid-gap: 10px;
+        }
+        .element{
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        #navbar{
+            grid-area: nav;
+        }
+        #navbar ul{
+            display: flex;
+            list-style: none;
+        }
+        .navitem{
+            margin: 2px 10px;
+            border: 2px solid white;
+            padding: 10px;
+        }
+        .navitem:hover{
+            background-color: white;
+            color: black;
+        }
+        #section1{
+            grid-area: sec1;
+        }
+        #section2{
+            grid-area: sec2;
+        }
+    </style>
+</head>
+<body>
+    <div class="element" id="navbar">
+        <ul>
+            <li class="navitem">Item-1</li>
+            <li class="navitem">Item-2</li>
+            <li class="navitem">Item-3</li>
+            <li class="navitem">Item-4</li>
+            <li class="navitem">Item-5</li>
+        </ul>
+    </div>
+    <div class="element" id="section1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam reprehenderit laudantium eaque quidem sunt labore, quia id dolores iure voluptate veniam unde nostrum, porro mollitia sequi minima vitae quod libero quos? Corrupti in provident eius error perferendis nulla voluptatibus fugit iste veritatis culpa, eum architecto aliquam laborum alias voluptatum fugiat, corporis reprehenderit explicabo voluptas recusandae. Impedit quaerat provident ipsum nesciunt dicta maxime distinctio doloribus, minima maiores laudantium! In sequi error numquam nam reiciendis, non ipsa esse itaque quam commodi vero explicabo praesentium veritatis voluptates velit dolorum aliquid id nobis. Nostrum rem sit nam ullam. Aliquid est eveniet nostrum eaque sed, accusamus odit aperiam architecto temporibus earum quas soluta quidem, blanditiis accusantium cumque exercitationem cupiditate assumenda. Culpa rerum minima voluptates placeat magnam qui quas esse, quis hic dolores laborum voluptatem in neque eos fuga nulla similique aliquam tempore. Totam impedit quaerat inventore ullam sint voluptatum libero earum laudantium, molestiae, esse excepturi minus blanditiis animi, amet sunt natus soluta. Deserunt hic quibusdam a? Nulla quidem explicabo, accusantium, ab maxime, fugiat corrupti cum nesciunt assumenda sit sequi? Aliquam blanditiis cupiditate repellat saepe eum, aperiam assumenda error laboriosam asperiores obcaecati aspernatur molestiae hic dolores voluptas repudiandae. Eaque quas sit enim vero quod inventore ex?Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, voluptate omnis at, adipisci vitae ad alias eveniet aliquid laborum delectus commodi doloremque est, soluta saepe reprehenderit? Amet facilis architecto atque commodi, veniam repellat qui.</div>
+    <div class="element" id="section2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam reprehenderit laudantium eaque quidem sunt labore, quia id dolores iure voluptate veniam unde nostrum, porro mollitia sequi minima vitae quod libero quos? Corrupti in provident eius error perferendis nulla voluptatibus fugit iste veritatis culpa, eum architecto aliquam laborum alias voluptatum fugiat, corporis reprehenderit explicabo voluptas recusandae. Impedit quaerat provident ipsum nesciunt dicta maxime distinctio doloribus, minima maiores laudantium! In sequi error numquam nam reiciendis, non ipsa esse itaque quam commodi vero explicabo praesentium veritatis voluptates velit dolorum aliquid id nobis. Nostrum rem sit nam ullam. Aliquid est eveniet nostrum eaque sed, accusamus odit aperiam architecto temporibus earum quas soluta quidem, blanditiis accusantium cumque exercitationem cupiditate assumenda. Culpa rerum minima voluptates placeat magnam qui quas esse, quis hic dolores laborum voluptatem in neque eos fuga nulla similique aliquam tempore. Totam impedit quaerat inventore ullam sint voluptatum libero earum laudantium, molestiae, esse excepturi minus blanditiis animi, amet sunt natus soluta. Deserunt hic quibusdam a? Nulla quidem explicabo, accusantium, ab maxime, fugiat corrupti cum nesciunt assumenda sit sequi? Aliquam blanditiis cupiditate repellat saepe eum, aperiam assumenda error laboriosam asperiores obcaecati aspernatur molestiae hic dolores voluptas repudiandae. Eaque quas sit enim vero quod inventore ex?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perferendis maiores accusantium nesciunt rerum quaerat, mollitia accusamus beatae odit officia ullam similique harum nemo, cupiditate sint molestias porro, nisi saepe provident ad aliquam?</div>
+    <script>
+        //accessing the elements
+        navbar=document.getElementById("navbar");
+        console.log(navbar);
+        elements=document.getElementsByClassName("element");
+        console.log(elements);
+        SelectorSelection=document.querySelector(".navitem");
+        SelectorSelections=document.querySelectorAll(".navitem");
+        console.log(SelectorSelection)
+        console.log(SelectorSelections)
+    </script>
+
+</body>
+</html>

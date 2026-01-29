@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transitions</title>
+    <style>
+        @media only screen and (max-width: 1000px){
+            :root{
+                --dimension: 98vw;
+                --box-size: 29vw;
+                --margin: 10vw;
+                --new-box-size: 49vw;
+                --new-margin: 0vw;
+            }
+        }
+        @media only screen and (min-width: 1001px) {
+            :root{
+                --dimension: 98vh;
+                --box-size: 29vh;
+                --margin: 10vh;
+                --new-box-size: 49vh;
+                --new-margin: 0vh;
+            }
+        }
+        
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .container{
+            margin:0px;
+            display: flex;
+            height: var(--dimension);
+            width: var(--dimension);
+            border: 4px solid black;
+            background-color: aqua;
+            flex-wrap: wrap;
+        }
+        .box{
+            box-sizing: border-box;
+            padding: 0px;
+            margin:var(--margin);
+            display: flex;
+            height: var(--box-size);
+            width: var(--box-size);
+            border: 2px solid black;
+            background-color: lawngreen;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        h2{
+            font-size: 300%;
+        }
+        /* adding transitions */
+        #box1{
+            transition-property: background-color;
+            transition-duration: 3s;
+            transition-timing-function: ease-out;
+            transition-delay: 0.3s;
+        }
+        #box2{
+            transition-property: margin,height,width, font-size;
+            transition-duration: 3s;
+            transition-timing-function: ease-out;
+            transition-delay: 0.3s;
+            /* transition: margin 3s ease-out 0.3s, height 3s ease-out 0.3s, width 3s ease-out 0.3s, font-size 3s ease-out 0.3s; */
+        }
+        #box3{
+            transition: border-radius 3s ease-out 0.3s;
+        }
+        #box4{
+            transition: all 3s ease-out 0.3s;
+        }
+        #box1:hover{
+            background-color: red;
+        }
+        #box2:hover{
+            margin: var(--new-margin);
+            height: var(--new-box-size);
+            width: var(--new-box-size);
+            font-size: 200%;
+        }
+        #box3:hover{
+            border-radius: 0%
+        }
+        #box4:hover{
+            border-radius: 0%;
+            margin: var(--new-margin);
+            height: var(--new-box-size);
+            width: var(--new-box-size);
+            background-color: red;
+            font-size: 200%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">
+            <h2>1</h2>
+            hover if laptop <br>
+            touch if mobile
+        </div>
+        <div class="box" id="box2">
+            <h2>2</h2>hover if laptop <br>
+            touch if mobile
+        </div>
+        <div class="box" id="box3">
+            <h2>3</h2>hover if laptop <br>
+            touch if mobile
+        </div>
+        <div class="box" id="box4">
+            <h2>4</h2>hover if laptop <br>
+            touch if mobile
+        </div>
+    </div>
+</body>
+</html>

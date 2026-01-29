@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and custom properties</title>
+    <style>
+        *{
+            --primary-colour: black;
+            --secondary-colour: lawngreen;
+            --box-width: 250px;
+        }
+        .box{
+            --box-height: 400px;
+            height: var(--box-height);
+            width: var(--box-width);
+            background-color: var(--primary-colour);
+            box-shadow: 0px 0px 10px 3px var(--primary-colour);
+            margin: 10px;
+            padding: 10px;
+        }
+        .container{
+            background-color: var(--secondary-colour);
+            display: flex;
+            padding: 20px;
+            margin: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .box p{
+            text-shadow: 0px 0px 5px red;
+            color: blue;
+        }
+        .box h2{
+            text-shadow: 0px 0px 5px red;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+     <h2>Variables in CSS</h2>
+     <div class="container">
+        <div class="box">
+            <h2>BOX 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, vero, aspernatur rerum vitae aut sequi iste sapiente pariatur laborum ipsa earum alias provident, quo maiores! Magnam nemo porro dignissimos praesentium quia labore pariatur rem, inventore optio dicta, quae soluta quos et unde quisquam asperiores corporis temporibus error. Totam, cupiditate eveniet!</p>
+        </div>
+        <div class="box">
+            <h2>BOX 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, vero, aspernatur rerum vitae aut sequi iste sapiente pariatur laborum ipsa earum alias provident, quo maiores! Magnam nemo porro dignissimos praesentium quia labore pariatur rem, inventore optio dicta, quae soluta quos et unde quisquam asperiores corporis temporibus error. Totam, cupiditate eveniet!</p>
+        </div>
+        <div class="box">
+            <h2>BOX 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, vero, aspernatur rerum vitae aut sequi iste sapiente pariatur laborum ipsa earum alias provident, quo maiores! Magnam nemo porro dignissimos praesentium quia labore pariatur rem, inventore optio dicta, quae soluta quos et unde quisquam asperiores corporis temporibus error. Totam, cupiditate eveniet!</p>
+        </div>
+     </div>
+</body>
+</html>

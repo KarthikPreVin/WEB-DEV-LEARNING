@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        body{
+            zoom: 80%;
+        }
+        .container {
+            border: 5px solid black;
+            width: 900px;
+            height: 1400px;
+        }
+
+        #container1 {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+        }
+
+        #container2 {
+            position: absolute;
+            top: 1424px;
+            left: 8px;
+        }
+
+
+        .box {
+            border: 2px solid red;
+            border-radius: 10px;
+            height: 400px;
+            width: 400px;
+            text-align: center;
+            display: inline-block;
+            font-size: 50px;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        #box1 {
+            position: relative;
+            top: 30px;
+            left: 30px;
+        }
+
+        #box2 {
+            position: absolute;
+            top: 30px;
+            left: 467px;
+        }
+
+        #box3 {
+            position: fixed;
+            top: 480px;
+            left: 40px;
+        }
+
+        #box4 {
+            position: sticky;
+            top: 480px;
+            left: 480px;
+        }
+        #heading{
+            position: fixed;
+            top: 30px;
+            right: 100px;
+            border: 5px solid blue;
+            color: red;
+            background-color: black;
+            padding: 10px 25px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">Scroll Down!!</h1>
+    <div class="container" id="container1">
+        <div class="box" id="box1">
+            Box No.1
+            <h6>relative positioning <br><br>
+                position: relative;<br>
+                top: 30px;<br>
+                left: 30px;</h6>
+        </div>
+        <div class="box" id="box2">
+            Box No.2
+            <h6>absolute positioning <br><br>
+                position: absolute;<br>
+                top: 30px;<br>
+                left: 467px;
+            </h6>
+        </div>
+        <div class="box" id="box3">
+            Box No.3
+            <h6>fixed positioning <br><br>
+                position: fixed;<br>
+                top: 480px;<br>
+                left: 40px;
+            </h6>
+        </div>
+        <div class="box" id="box4">
+            Box No.4
+            <h6>sticky positioning <br><br>
+                position: sticky;<br>
+                top: 480px;<br>
+                left: 480px;
+            </h6>
+        </div>
+    </div>
+    <div class="container" id="container2"></div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding image</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        .navigation ul{
+            display: flex;
+            list-style: none;
+            padding: 20px 10px;
+        }
+        .listitem{
+            margin: 3px 10px;
+            border: 2px solid white;
+            width: 100px;
+            text-align: center;
+            background-color: rgba(0,0,0,0.5);
+        }
+        hr{
+            margin: 50px 0px;
+            
+        }
+        .heading{
+            text-decoration-line: underline;
+        }
+        .heading::before{
+            content: "";
+            background: url('https://images.unsplash.com/photo-1472313420546-a46e561861d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80') no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+        .section{
+            border: 2px solid white;
+            padding: 25px;
+            width: 80vw;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(0,0,0,0.6);
+        }
+        p::before{
+            content: "random text here";
+            display:block;
+            text-decoration-line: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <ul>
+            <li class="listitem" id="item1">Home</li>
+            <li class="listitem" id="item2">About</li>
+            <li class="listitem" id="item3">Explore</li>
+            <li class="listitem" id="item4">Ideas</li>
+        </ul>
+    </nav>
+    <hr>
+    <section class="section">
+        <h1 class="heading">Welcome to My WebPage</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptates accusamus maiores praesentium ipsam minima asperiores nostrum, ea in quia possimus reiciendis molestiae aut saepe! Tempore laudantium minus nostrum nisi dolores ipsa vero, inventore quam numquam. Commodi, sint pariatur tempora modi nihil placeat animi sequi vel molestias unde quibusdam enim dicta necessitatibus dolorum ipsam aliquid. Pariatur praesentium similique debitis eius, nemo inventore reiciendis velit rerum, mollitia quibusdam at amet a dolor esse recusandae distinctio vero? Repellendus quisquam pariatur natus reprehenderit sapiente nihil unde omnis aperiam quibusdam, quaerat voluptate aliquid ab, officiis eos voluptatum exercitationem debitis adipisci corporis libero minima ducimus laborum accusamus dolorem. Tenetur, repellat sed accusamus voluptates molestias ad cumque, aliquid minus ratione ullam soluta reiciendis! Et ipsa necessitatibus nesciunt voluptas sit, ex aut odio sint fugit, dolores distinctio? Nemo, fugit! Iusto inventore aliquid, numquam nisi recusandae odit ab ex doloremque doloribus corrupti dicta impedit rerum, natus sint ratione?</p>
+        
+    </section>
+    <hr>
+</body>
+</html>
